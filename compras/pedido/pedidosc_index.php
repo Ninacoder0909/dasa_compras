@@ -11,11 +11,11 @@
     ?>
 </HEAD>
 
-<BODY class="hold-transition skin-blue sidebar-mini">
+<BODY class="hold-transition skin-blue sidebar-mini" style="background-color: #1E1E2F;">
     <div class="wrapper">
         <?php require '../../estilos/cabecera.ctp'; ?>
         <?php require '../../estilos/izquierda.ctp'; ?>
-        <div class="content-wrapper" style="background-color:  #DEEBFE ">
+        <div class="content-wrapper">
             <div class="content">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-xs-12">
@@ -36,18 +36,15 @@
                                 ?>
                             </div>
                         <?php } ?>
-                        <div class="box box-primary" style="background-color: white ">
+                        <div class="box box-primary">
                             <div class="box-header" style="text-align: center">
                                 <i class="ion ion-clipboard"></i>
 
                                 <h2 class="box-title">Pedidos de Compra</h2>
                                 <div class="box-tools">
-                                    <a href="pedidosc_add.php" class="btn btn-success pull-right btn-sm" style="padding: 8px; margin: 1px">
+                                    <a href="pedidosc_add.php" class="btn btn-success pull-right btn-sm">
                                         <i class="fa fa-plus"></i>
                                     </a>
-                                    <!--                                        <a  href="/dasa_compras/compras/presupuesto/presupuesto_index.php" class="btn btn-bitbucket pull-right btn-sm"  rel="tooltip"  style="margin: 1px;">Ir a presupuesto
-                                            <i class="fa fa-arrow-circle-right"></i>
-                                        </a>-->
                                 </div>
                             </div>
                             <div class="box-body no-padding">

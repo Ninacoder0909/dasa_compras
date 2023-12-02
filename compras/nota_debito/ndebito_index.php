@@ -11,11 +11,11 @@
     ?>
 </head>
 
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-blue sidebar-mini" style="background-color: #1E1E2F;">
     <div class="wrapper">
         <?php require '../../estilos/cabecera.ctp'; ?>
         <?php require '../../estilos/izquierda.ctp'; ?>
-        <div class="content-wrapper" style="background-color: rgb(241,231,254)">
+        <div class="content-wrapper">
             <div class="content">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-xs-12">

@@ -124,8 +124,7 @@ session_start();
             } else {
                 if (document.getElementById('pedido').value == 0) {
                     detalle1 = document.getElementById('pedidos_detalle');
-                    detalle1.style.display = 'none'
-                    ';
+                    detalle1.style.display = 'none';
                 }
             }
         }

@@ -69,7 +69,8 @@
     }
 </script>
 
-<body class="hold-transition skin-blue sidebar-mini">
+<BODY class="hold-transition skin-blue sidebar-mini" style="background-color: #1E1E2F;">
+
     <div class="wrapper">
         <?php require '../../estilos/cabecera.ctp'; ?>
         <?php require '../../estilos/izquierda.ctp'; ?>

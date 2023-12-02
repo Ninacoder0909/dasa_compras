@@ -18,7 +18,7 @@ if ($_SESSION) {
         body {
             padding-top: 40px;
             padding-bottom: 40px;
-            background-color: #181818;
+            background-color: black;
         }
 
         #sha {
@@ -28,7 +28,7 @@ if ($_SESSION) {
             box-shadow: 0px 0px 18px 0px rgba(48, 50, 50, 0.48);
             border-radius: 6%;
             border-color: #00ACD6;
-            background-color: rgba(8, 105, 170, 0.288);
+            background-color: #1E1E2F;
         }
 
         #avatar {

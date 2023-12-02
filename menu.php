@@ -11,11 +11,11 @@
     ?>
 </head>
 
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-blue sidebar-mini" style="background-color: #1E1E2F;">
     <div class="wrapper">
         <?php require './estilos/cabecera.ctp'; ?>
         <?php require './estilos/izquierda.ctp'; ?>
-        <div class="content-wrapper" style="background-repeat: no-repeat; background-position:  top;background-image: url('/dasa_compras/img/sistema/fondo1.jpg');background-size: 100% 100%;background-size: cover">
+        <div class="content-wrapper" style="background-repeat: no-repeat; background-position:center;background-image: url('/dasa_compras/img/sistema/fondo1.jpg');background-size: 100% 100%;background-size: cover">
             <section class="content">
                 <h3 style="font-weight: bold; font-size: 20px;text-align: center;color: whitesmoke">
                     Bienvenido al Sistema: <?php echo ' ' . $_SESSION['nombres']; ?>

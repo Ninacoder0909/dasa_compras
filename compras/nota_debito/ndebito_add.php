@@ -69,12 +69,13 @@
     }
 </script>
 
-<body class="hold-transition skin-blue sidebar-mini">
+<BODY class="hold-transition skin-blue sidebar-mini" style="background-color: #1E1E2F;">
+
     <div class="wrapper">
         <?php require '../../estilos/cabecera.ctp' ?>
         <?php require '../../estilos/izquierda.ctp' ?>
 
-        <div class="content-wrapper" style="background-color: rgb(241,231,254);">
+        <div class="content-wrapper">
             <div class="content">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-xs-12">
@@ -179,7 +180,7 @@
                                             <label class="control-label  col-lg-3 col-sm-2 col-xs-2">Monto</label>
                                             <div class="col-lg-4 col-sm-4 col-xs-4">
                                                 <?php date_default_timezone_set('America/Asuncion'); ?>
-                                                <input class="form-control" onkeypress="return soloNUM(event)" type="number" name="vmonto">
+                                                <input class="form-control" onkeypress="return soloNUM(event)" min="0" type="number" name="vmonto">
                                             </div>
                                         </div>
                                         <div class="form-group">

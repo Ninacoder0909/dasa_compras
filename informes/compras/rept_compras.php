@@ -11,7 +11,8 @@
     ?>
 </head>
 
-<body class="hold-transition skin-blue sidebar-mini">
+<BODY class="hold-transition skin-blue sidebar-mini" style="background-color: #1E1E2F;">
+
     <div class="wrapper">
         <?php require '../../estilos/cabecera.ctp'; ?>
         <?php require '../../estilos/izquierda.ctp'; ?>
@@ -34,7 +35,7 @@
                                                 <a href="#" class="list-group-item" onclick="obtener_orden();" style="color: black">Orden de Compra</a>
                                                 <a href="#" class="list-group-item" onclick="obtener_compras();" style="color: black">Compras</a>
                                                 <a href="#" class="list-group-item" onclick="obtener_cuentas();" style="color: black">Cuentas</a>
-                                                <!-- <a href="#" class="list-group-item" onclick="obtener_libro();" style="color: black">Libros de Compra</a> -->
+                                                <a href="#" class="list-group-item" onclick="obtener_libro();" style="color: black">Libros de Compra</a>
                                             </div>
                                         </div>
                                         <div id="cargando"></div>

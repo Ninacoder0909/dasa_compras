@@ -22,7 +22,6 @@
         </div>
         <ul class="sidebar-menu" style="background-color: #1E1E2F">
             <li> <a> </a></li>
-            <li> <a style="border-top: 2px solid #1C8AF6; box-shadow: inset 0px 5px 5px rgba(28, 138, 246, 0.5)"> </a></li>
             <!-- <li class="header">
                 <font style="vertical-align: inherit;">
                     <font style="vertical-align: inherit;font-size: 15px;color: white">Navegación Principal</font>

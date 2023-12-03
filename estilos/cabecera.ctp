@@ -3,12 +3,13 @@
         <span class="navbar-toggler-bar bar1"></span>
         <span class="sr-only" style="color: #00C0EF; text-shadow: 0 0 10px rgba(135, 206, 250, 0.8);">Toggle navigation</span>
         <span class="logo-mini" style="background-color: #1E1E2F; margin-left: 15px; font-size: larger; color: whitesmoke;">
-            <b>T.S Electricidad e Inf.</b>
+            <b>T.S </b>
         </span>
 
     </a>
 
-    <nav class="navbar navbar-static-top" style="background-color: #1E1E2F;border-top: 2px solid #1C8AF6;" role="navigation">
+    <nav class="navbar navbar-static-top" style="background-color: #1E1E2F;" role="navigation">
+        <!-- <nav class="navbar navbar-static-top" style="background-color: #1E1E2F;border-top: 2px solid #1C8AF6;" role="navigation"> -->
 
         <!-- Menu emergente derecho -->
         <div class="navbar-custom-menu" style="background-color: #1E1E2F;">
@@ -43,23 +44,10 @@
                                     }
                                     ?>
                                 </small>
-
-                                <!--                                <small><b>SUCURSAL: </b>
-                                    <php
-                                    if (!empty($_SESSION['suc_descri'])) {
-                                        echo $_SESSION['suc_descri'];
-                                    } else {
-                                        echo "ERROR 69, CONTACTE AL 911";
-                                    }
-                                    ?>
-                                </small>-->
-                            </p>
-                        </li>
-                        <!-- acciones dentro del menu emergente-->
                         <li class="user-footer">
-                            <div class="pull-left">
+                            <!-- <div class="pull-left">
                                 <a href="/dasa_compras/ayuda.pdf" target="_blank" class="btn btn-default" style="color:blue;"> Ayuda </a>
-                            </div>
+                            </div> -->
                             <div class="pull-right">
                                 <a href="/dasa_compras" class="btn btn-default" style="color: red;"> Salir </a>
                             </div>

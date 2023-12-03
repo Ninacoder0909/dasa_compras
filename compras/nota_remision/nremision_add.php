@@ -153,7 +153,7 @@
                                         <div class="form-group">
                                             <label class="control-label  col-lg-3 col-sm-2 col-xs-2">Orden de compra</label>
                                             <div class="col-lg-4 col-sm-4 col-xs-4">
-                                                <?php $productos = consultas::get_datos("SELECT * FROM v_orden_de_compra WHERE estado = 'CONFIRMADO' OR estado = 'EN USO'"); ?>
+                                                <?php $productos = consultas::get_datos("SELECT * FROM v_orden_de_compra WHERE estado = 'CONFIRMADO' OR estado = 'EN PROCESO'"); ?>
                                                 <select class="form-control" required="" name="vidorden" id="pedido" onclick="obtenerord()" onchange="obtenerord()">
                                                     <option id="valor" value="">Debe seleccionar una Orden</option>
                                                     <?php

@@ -227,7 +227,7 @@
                                         </div>
                                     <?php } else { ?>
                                         <div class="alert alert-danger flat">
-                                            <span class="glyphicon glyphicon-info-sign"></span> El pedido no tiene detalles...
+                                            <span class="glyphicon glyphicon-info-sign"></span> La compra no tiene detalles...
                                         </div>
                                     <?php } ?>
                                 </div>

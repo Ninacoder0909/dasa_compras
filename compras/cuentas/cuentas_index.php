@@ -71,7 +71,7 @@
                                         if (isset($_REQUEST['buscar'])) {
                                             $valor = $_REQUEST['buscar'];
                                         }
-                                        $grupos = consultas::get_datos("SELECT * FROM v_cuentas WHERE (id_cuenta||TRIM(UPPER(nro_factura))) LIKE TRIM(UPPER('%" . $valor . "%')) AND estado <> 'ANULADO' ORDER BY id_cuenta");
+                                        $grupos = consultas::get_datos("SELECT * FROM v_cuentas WHERE (id_cuenta||TRIM(UPPER(nro_factura))) LIKE TRIM(UPPER('%" . $valor . "%')) AND estado <> 'ANULADO' ORDER BY id_compra");
                                         //$grupos = consultas::get_datos("SELECT * FROM ref_grupos ORDER BY gru_cod");
                                         if (!empty($grupos)) {
                                         ?>

@@ -123,7 +123,7 @@
                                                                 <td style="border: black solid thin;" class="text-center" data-title="Deposito "> <?php echo $p['factura'] ?></td>
                                                                 <td style="border: black solid thin;" class="text-center" data-title="Cantidad "> <?php echo $p['fecha_pedido1'] ?></td>
                                                                 <td style="border: black solid thin;" class="text-center"> <?php echo $resultadoiva; ?></td>
-                                                                <td style="border: black solid thin;" class="text-center"> <?php echo $resultado; ?></td>
+                                                                <td style="border: black solid thin;" class="text-center"> <?php echo $resultado + $p['monto'] ?></td>
                                                                 <td style="border: black solid thin;" style="border: black solid thin;" data-title="Acciones" class="text-center">
 
 

@@ -163,7 +163,7 @@
                                                                 <td class="text-center"> <?php echo $pc['prv_razon_social']; ?></td>
                                                                 <td class="text-center"> <?php echo $pc['descripcion']; ?></td>
                                                                 <td class="text-center"> <?php echo $resultadoiva; ?></td>
-                                                                <td class="text-center"> <?php echo $resultado; ?></td>
+                                                                <td class="text-center"> <?php echo $resultado + $pc['monto']; ?></td>
 
                                                             </tr>
                                                         <?php } ?>

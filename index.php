@@ -61,9 +61,17 @@ if ($_SESSION) {
 
             </div>
             <div class="form-group has-feedback">
-                <input type="password" name="pass" onkeypress="return contraseña(event)" class="form-control" placeholder="" required="">
-                <span class="glyphicon glyphicon-qrcode form-control-feedback"></span>
+                <div class="input-group">
+                    <input type="password" name="pass" id="password" class="form-control" placeholder="Ingrese contraseña" required="">
+                    <div class="input-group-addon">
+                        <span id="togglePassword" class="glyphicon glyphicon-eye-open" style="cursor: pointer;"></span>
+                    </div>
+                </div>
             </div>
+            <!-- <div class="form-group has-feedback">
+                <input type="password" id="password" name="pass" onkeypress="return contraseña(event)" class="form-control" placeholder="" required="">
+                <span class="glyphicon glyphicon-qrcode form-control-feedback"></span>
+            </div> -->
             <button class="btn btn-lg btn-primary btn-block" type="submit" style="">Iniciar Sesion</button en btn-primary si cambio primary de acuerdo al dashboard me cambia el estilo del boton <div class="checkbox" style="padding: 0px 20px">
             <p class="help-block"><a href="#" style="color: whitesmoke; font-weight: bold">¿No puede ingresar a su cuenta?</a></p>
     </div>
@@ -117,6 +125,17 @@ if ($_SESSION) {
             return false;
         }
     }
+</script>
+<script>
+    const togglePassword = document.getElementById('togglePassword');
+    const password = document.getElementById('password');
+
+    togglePassword.addEventListener('click', function() {
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+        togglePassword.classList.toggle('glyphicon-eye-open');
+        togglePassword.classList.toggle('glyphicon-eye-close');
+    });
 </script>
 
 </html>

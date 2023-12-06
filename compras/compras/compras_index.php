@@ -83,6 +83,7 @@
                                                         <tr style="background-color: #ABD3D1;">
                                                             <th style="border: black solid thin;" class="text-center">#</th>
                                                             <th style="border: black solid thin;" class="text-center">N° Orden</th>
+                                                            <th style="border: black solid thin;" class="text-center">N° Remision</th>
                                                             <th style="border: black solid thin;" class="text-center">Fecha</th>
                                                             <th style="border: black solid thin;" class="text-center">Proveedor</th>
                                                             <th style="border: black solid thin;" class="text-center">Nro. factura</th>
@@ -105,6 +106,7 @@
                                                                 </td>
                                                                 <td style="border: black solid thin;" class="text-center"> <?php echo $c['id_compra']; ?></td>
                                                                 <td style="border: black solid thin;" class="text-center"> <?php echo $c['id_ordenc']; ?></td>
+                                                                <td style="border: black solid thin;" class="text-center"> <?php echo $c['id_remision']; ?></td>
                                                                 <td style="border: black solid thin;" class="text-center"> <?php echo $c['compra_fecha']; ?></td>
                                                                 <td style="border: black solid thin;" class="text-center"> <?php echo $c['prv_razon_social']; ?></td>
                                                                 <td style="border: black solid thin;" class="text-center"> <?php echo $c['nro_factura']; ?></td>

@@ -44,6 +44,24 @@
                                     }
                                     ?>
                                 </small>
+                                <small><b>SUCURSAL: </b>
+                                    <?php
+                                    if (!empty($_SESSION['suc_descri'])) {
+                                        echo $_SESSION['suc_descri'];
+                                    } else {
+                                        echo "ERROR 69, CONTACTE AL 911";
+                                    }
+                                    ?>
+                                </small>
+                                <small><b>SUCURSAL: </b>
+                                    <?php
+                                    if (!empty($_SESSION['suc_descri'])) {
+                                        echo $_SESSION['id_sucursal'];
+                                    } else {
+                                        echo "ERROR 69, CONTACTE AL 911";
+                                    }
+                                    ?>
+                                </small>
                         <li class="user-footer">
                             <!-- <div class="pull-left">
                                 <a href="/dasa_compras/ayuda.pdf" target="_blank" class="btn btn-default" style="color:blue;"> Ayuda </a>

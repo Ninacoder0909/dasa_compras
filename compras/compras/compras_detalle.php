@@ -135,6 +135,7 @@
                                                             <th class="text-center">Fecha</th>
                                                             <th class="text-center">N° orden</th>
                                                             <th class="text-center">Proveedor</th>
+                                                            <th class="text-center">Sucursal</th>
                                                             <th class="text-center">Iva Total</th>
                                                             <th class="text-center">Total</th>
                                                         </tr>
@@ -160,6 +161,7 @@
                                                                 <td class="text-center"> <?php echo $pc['fechac']; ?></td>
                                                                 <td class="text-center"> <?php echo $pc['id_ordenc']; ?></td>
                                                                 <td class="text-center"> <?php echo $pc['prv_razon_social']; ?></td>
+                                                                <td class="text-center"> <?php echo $pc['suc_descri']; ?></td>
                                                                 <td class="text-center"> <?php echo $resultadoiva; ?></td>
                                                                 <td class="text-center"> <?php echo $resultado; ?></td>
 
@@ -192,9 +194,10 @@
                                                 <thead>
                                                     <tr>
                                                         <th class="text-center">Producto</th>
+                                                        <th class="text-center">Deposito</th>
                                                         <th class="text-center">Cantidad</th>
                                                         <th class="text-center">Precio</th>
-                                                        <th class="text-center">Subtotal</th>
+
                                                         <th class="text-center">Iva 5</th>
                                                         <th class="text-center">Iva 10</th>
                                                         <th class="text-center">Exentas</th>
@@ -207,9 +210,9 @@
                                                     <?php foreach ($comprasdetalle as $pcd) { ?>
                                                         <tr>
                                                             <td class="text-center"> <?php echo $pcd['pro_descri']; ?></td>
+                                                            <td class="text-center"> <?php echo $pcd['dep_descri']; ?></td>
                                                             <td class="text-center"> <?php echo $pcd['cantidad']; ?></td>
                                                             <td class="text-center"> <?php echo $pcd['precio']; ?></td>
-                                                            <td class="text-center"> <?php echo $pcd['cantidad'] * $pcd['precio']; ?></td>
                                                             <td class="text-center"> <?php echo $pcd['iva5']; ?></td>
                                                             <td class="text-center"> <?php echo $pcd['iva10']; ?></td>
                                                             <td class="text-center"> <?php echo $pcd['exentas']; ?></td>
@@ -276,7 +279,6 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-
                                                         <div class="form-group">
                                                             <label class="control-label col-lg-6 col-sm-6 col-md-6 col-xs-6">Cantidad</label>
                                                             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6">
@@ -287,12 +289,6 @@
                                                             <label class="control-label col-lg-6 col-sm-6 col-md-6 col-xs-6">Precio</label>
                                                             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6">
                                                                 <input type="number" name="vprecio" class="form-control" min="0" value="0" max="50000000" onkeypress="return soloNUM(event)" style="width: 300px;">
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group" style="display: none">
-                                                            <label class="control-label col-lg-6 col-sm-6 col-md-6 col-xs-6">Subtotal</label>
-                                                            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6">
-                                                                <input type="text" name="vsubtotal" class="form-control" min="0" value="0" id="idsubtotal" readonly="" style="width: 300px;">
                                                             </div>
                                                         </div>
                                                     </div>

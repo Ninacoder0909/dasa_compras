@@ -58,6 +58,7 @@ session_start();
                 </div>
                 <div class="form-group">
                     <label class="control-label col-lg-2 col-sm-2 col-xs-2">Fecha</label>
+                    <input type="hidden" name="vsucursal" value="<?php echo $_SESSION['id_sucursal']; ?>">
                     <div class="col-lg-6 col-sm-6 col-xs-6">
                         <input class="form-control" type="date" id="iddesde" name="vfecha" min="2022-01-01" value="<?= date('Y-m-d'); ?>" max="<?= date('Y-m-d'); ?>" required="">
                     </div>

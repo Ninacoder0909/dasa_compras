@@ -122,6 +122,7 @@
                                                             <th class="text-center">Fecha</th>
                                                             <th class="text-center">Empleado</th>
                                                             <th class="text-center">Proveedor</th>
+                                                            <th class="text-center">Sucursal</th>
                                                             <th class="text-center">Total</th>
                                                         </tr>
                                                     </thead>
@@ -133,6 +134,7 @@
                                                                 <td class="text-center"> <?php echo $pc['presu_fecha']; ?></td>
                                                                 <td class="text-center"> <?php echo $pc['empleado']; ?></td>
                                                                 <td class="text-center"> <?php echo $pc['prv_razon_social']; ?></td>
+                                                                <td class="text-center"> <?php echo $pc['suc_descri']; ?></td>
                                                                 <td class="text-center"> <?php echo $resultado; ?></td>
                                                             </tr>
                                                         <?php } ?>

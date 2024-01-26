@@ -10,11 +10,13 @@ $usuario = $_REQUEST['vusuario'];
 $fsistema = $_REQUEST['fecsistema'];
 $validez = $_REQUEST['valido'];
 $fecha = $_REQUEST['vfecha'];
+$sucur = $_REQUEST['vsucursal'];
 
 
 
 $sql = "SELECT sp_presupuesto(" . $operacion . "," .
     (!empty($codigo) ? $codigo : 0) . "," .
+    (!empty($sucur) ? $sucur : 0) . "," .
     (!empty($proveedor) ? $proveedor : 0) . "," .
     (!empty($pedido) ? $pedido : 0) . "," .
     (!empty($usuario) ? $usuario : 0) . ",'" .

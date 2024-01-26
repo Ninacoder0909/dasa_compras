@@ -118,6 +118,7 @@
                                                             <th class="text-center">#</th>
                                                             <th class="text-center">Fecha</th>
                                                             <th class="text-center">Usuario</th>
+                                                            <th class="text-center">Sucursal</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -126,7 +127,7 @@
                                                                 <td class="text-center"> <?php echo $pc['id_pedido']; ?></td>
                                                                 <td class="text-center"> <?php echo $pc['fecha_pedido1']; ?></td>
                                                                 <td class="text-center"> <?php echo $pc['usu_nick']; ?></td>
-
+                                                                <td class="text-center"> <?php echo $pc['suc_descri']; ?></td>
                                                             </tr>
                                                         <?php } ?>
                                                     </tbody>

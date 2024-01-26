@@ -122,6 +122,7 @@
                                                                     <th class="text-center">Fecha</th>
                                                                     <th class="text-center">N° Presupuesto</th>
                                                                     <th class="text-center">Proveedor</th>
+                                                                    <th class="text-center">Sucursal</th>
                                                                     <th class="text-center">Total</th>
                                                                 </tr>
                                                             </thead>
@@ -138,6 +139,7 @@
                                                                         <td class="text-center"> <?php echo $pp['orden_fecha']; ?></td>
                                                                         <td class="text-center"> <?php echo $pre['id_presupuesto']; ?></td>
                                                                         <td class="text-center"> <?php echo $pp['prv_razon_social']; ?></td>
+                                                                        <td class="text-center"> <?php echo $pre['suc_descri']; ?></td>
                                                                         <td class="text-center"> <?php echo $resultado; ?></td>
                                                                     </tr>
                                                                 <?php } ?>

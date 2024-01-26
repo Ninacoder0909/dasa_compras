@@ -10,11 +10,13 @@ $fecha = $_REQUEST['vfecha'];
 $estado = $_REQUEST['vestado'];
 $usuario = $_REQUEST['vusuario'];
 $presup = $_REQUEST['vidpresupuesto'];
+$sucur = $_REQUEST['vsucursal'];
 
 
 
 $sql = "SELECT sp_orden_compras(" . $operacion . "," .
     (!empty($codigo) ? $codigo : 0) . "," .
+    (!empty($sucur) ? $sucur : 0) . "," .
     (!empty($proveedor) ? $proveedor : 0) . ",'" .
     (!empty($fecha) ? $fecha : '2000/01/05') . "','" .
     (!empty($estado) ? $estado : 'VACIO') . "'," .

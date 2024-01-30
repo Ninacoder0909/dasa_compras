@@ -136,6 +136,7 @@
                                                             <th class="text-center">N° orden</th>
                                                             <th class="text-center">Proveedor</th>
                                                             <th class="text-center">Motivo</th>
+                                                            <th class="text-center">Sucursal</th>
                                                             <th class="text-center">Iva Total</th>
                                                             <th class="text-center">Total</th>
                                                         </tr>
@@ -162,6 +163,7 @@
                                                                 <td class="text-center"> <?php echo $pc['id_compra']; ?></td>
                                                                 <td class="text-center"> <?php echo $pc['prv_razon_social']; ?></td>
                                                                 <td class="text-center"> <?php echo $pc['descripcion']; ?></td>
+                                                                <td class="text-center"> <?php echo $pc['suc_descri']; ?></td>
                                                                 <td class="text-center"> <?php echo $resultadoiva; ?></td>
                                                                 <td class="text-center"> <?php echo $resultado + $pc['monto']; ?></td>
 
@@ -254,7 +256,7 @@
                                                         <div class="form-group">
                                                             <label class="control-label col-lg-6 col-sm-6 col-md-6 col-xs-6">Producto</label>
                                                             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6">
-                                                                <?php $productos = consultas::get_datos("SELECT * FROM ref_producto where pro_cod != 0 ORDER BY pro_cod") ?>
+                                                                <?php $productos = consultas::get_datos("SELECT * FROM v_compras_detalle where id_compra = (SELECT id_compra from n_deb where id_debito = " . $_REQUEST['viddebito'] . " )") ?>
                                                                 <div class="input-group">
                                                                     <select class="form-control" id="idproducto" onchange="obtenerprecio()" onkeyup="obtenerprecio()" onclick="obtenerprecio()" name="vproducto" required="" style="width: 300px;height: 33px;">
                                                                         <option value="">Debe elegir una opcion</option>

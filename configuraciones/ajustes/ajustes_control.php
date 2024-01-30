@@ -8,10 +8,12 @@ session_start();
 $operacion = $_REQUEST['voperacion'];
 $usuario = $_REQUEST['vusuario'];
 $fecha = $_REQUEST['vfecha'];
+$sucur = $_REQUEST['vsucursal'];
 
 
 
 $sql = "SELECT sp_ajustes(" . $operacion . "," .
+    (!empty($sucur) ? $sucur : 0) . "," .
     (!empty($usuario) ? $usuario : 0) . ",'" .
     (!empty($fecha) ? $fecha : 0) . "') AS ajustes;";
 $resultado = consultas::get_datos($sql);

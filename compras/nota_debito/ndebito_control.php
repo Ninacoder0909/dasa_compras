@@ -15,8 +15,10 @@ $monto = $_REQUEST['vmonto'];
 $nrofac = $_REQUEST['vnrofactura'];
 $timbrado = $_REQUEST['vnrotimp'];
 $timven = $_REQUEST['vetimp'];
+$sucur = $_REQUEST['vsucursal'];
 
 $sql = "SELECT sp_ndebito(" . $operacion . "," .
+    (!empty($sucur) ? $sucur : 0) . "," .
     (!empty($codigo) ? $codigo : 0) . ",'" .
     (!empty($fechasis) ? $fechasis : "2000/01/01") . "','" .
     (!empty($fecha) ? $fecha : "2000/01/01") . "'," .

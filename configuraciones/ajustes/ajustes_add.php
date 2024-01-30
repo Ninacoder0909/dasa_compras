@@ -54,6 +54,7 @@
                                 <div class="box-body">
                                     <div class="form-group">
                                         <label class="control-label col-lg-3 col-sm-2 col-xs-2">Fecha</label>
+                                        <input type="hidden" name="vsucursal" value="<?php echo $_SESSION['id_sucursal']; ?>">
                                         <input type="hidden" name="voperacion" value="1">
                                         <div class="col-lg-4 col-sm-4 col-xs-4">
                                             <input class="form-control" type="text" name="vfecha" readonly="" value="<?php echo date("d-m-Y"); ?>" style="width: 300px;">

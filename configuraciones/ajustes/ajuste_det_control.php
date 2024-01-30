@@ -8,12 +8,14 @@ $codigo = $_REQUEST['vidajuste'];
 $producto = $_REQUEST['vproducto'];
 $cantidad = $_REQUEST['vcantidad'];
 $motivo = $_REQUEST['vidmotivo'];
+$deposito = $_REQUEST['vdeposito'];
 
 
 
 
 $sql = "SELECT sp_ajustes_det(" . $operacion . "," .
     (!empty($codigo) ? $codigo : 0) . "," .
+    (!empty($deposito) ? $deposito : 0) . "," .
     (!empty($producto) ? $producto : 0) . "," .
     (!empty($motivo) ? $motivo : 0) . "," .
     (!empty($cantidad) ? $cantidad : 0) . ") AS ajust;";

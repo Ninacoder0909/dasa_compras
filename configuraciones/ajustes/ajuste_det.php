@@ -118,6 +118,7 @@
                                                             <th class="text-center">#</th>
                                                             <th class="text-center">Fecha</th>
                                                             <th class="text-center">Usuario</th>
+                                                            <th class="text-center">Sucursal</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -126,7 +127,7 @@
                                                                 <td class="text-center"> <?php echo $pc['id_ajuste']; ?></td>
                                                                 <td class="text-center"> <?php echo $pc['fecha_pedido']; ?></td>
                                                                 <td class="text-center"> <?php echo $pc['usu_nick']; ?></td>
-
+                                                                <td class="text-center"> <?php echo $pc['suc_descri']; ?></td>
                                                             </tr>
                                                         <?php } ?>
                                                     </tbody>
@@ -156,7 +157,7 @@
                                                 <thead>
                                                     <tr>
                                                         <th class="text-center">Producto</th>
-
+                                                        <th class="text-center">Deposito</th>
                                                         <th class="text-center">Cantidad</th>
                                                         <th class="text-center">Motivo</th>
                                                         <?php if ($pc['estado'] == 'ACTIVO') { ?>
@@ -168,6 +169,7 @@
                                                     <?php foreach ($pedidoscdetalle as $pcd) { ?>
                                                         <tr>
                                                             <td class="text-center"> <?php echo $pcd['pro_descri']; ?></td>
+                                                            <td class="text-center"> <?php echo $pcd['dep_descri']; ?></td>
                                                             <td class="text-center"> <?php echo $pcd['cantidad']; ?></td>
                                                             <td class="text-center"> <?php echo $pcd['descripcion']; ?></td>
                                                             <td class="text-center">
@@ -254,6 +256,31 @@
                                                                             ?>
                                                                             <option value="">Debe insertar registros...</option>
                                                                         <?php } ?>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label col-lg-6 col-sm-6 col-xs-6">Deposito</label>
+                                                            <div class="col-lg-6 col-sm-6 col-xs-6">
+                                                                <div class="input-group">
+                                                                    <?php $impuesto = consultas::get_datos("SELECT * FROM ref_deposito ORDER BY id_depo"); ?>
+                                                                    <select class="form-control select3" name="vdeposito" required="" style="width: 265px;height: 33px;">
+                                                                        <option value="">Debe elegir una opcion</option>
+                                                                        <?php
+                                                                        if (!empty($impuesto)) {
+                                                                            foreach ($impuesto as $i) {
+                                                                        ?>
+                                                                                <option value="<?php echo $i['id_depo']; ?>"><?php echo $i['dep_descri']; ?></option>
+                                                                            <?php
+                                                                            }
+                                                                        } else {
+                                                                            ?>
+
+                                                                            <option value="0">Debe selecionar al menos un deposito</option>
+
+                                                                        <?php }
+                                                                        ?>
                                                                     </select>
                                                                 </div>
                                                             </div>

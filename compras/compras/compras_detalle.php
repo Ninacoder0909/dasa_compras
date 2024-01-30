@@ -222,7 +222,7 @@
                                                                         <i class="fa fa-building"></i>
                                                                     </a>
 
-                                                                    <a class="btn btn-lg" type="button" data-title="Ingresar cantidad" rel="tooltip" data-toggle="modal" data-target="#registrar_cantidad">
+                                                                    <a class="btn btn-lg" type="button" onclick="cantidad(<?php echo "'" . $pcd['id_compra'] . "_" . $pcd['pro_cod'] . "'"; ?>);" data-title="Ingresar cantidad" rel="tooltip" data-toggle="modal" data-target="#registrar_cantidad">
                                                                         <i class="fa fa-clipboard"></i>
                                                                     </a>
 
@@ -560,8 +560,9 @@
                                 <div class="form-group">
                                     <label for="" class="col-sm-2">Cantidad</label>
                                     <div class="col-xs-10 col-md-10 col-lg-10">
-                                        <input type="number" name="vcantidad" onkeypress="return soloNUM(event)" id="vcanti" class="form-control" required="" onchange="calsubtotal();" onkeydown="calsubtotal();" min="0" value="1" max="1000" style="width: 300px;">
-
+                                        <input type="number" name="vcantidad" onkeypress="return soloNUM(event)" id="vcanti" class="form-control" required="" onchange="calsubtotal();" onkeydown="calsubtotal();" min="1" value="1" max="1000" style="width: 300px;">
+                                        <input type="hidden" name="vproducto" id="productos">
+                                        <input type="hidden" name="vidcompra" value="<?php echo $_REQUEST['vidcompra']; ?>">
                                     </div>
                                 </div>
                             </div>
@@ -569,12 +570,9 @@
                                 <button type="reset" data-dismiss="modal" class="btn btn-danger" id="cerrarcanti">Cerrar</button>
                                 <button type="submit" class="btn btn-success pull-right">Registrar</button>
                             </div>
-
                         </form>
                     </div>
-
                 </div>
-
             </div>
             <!--MODAL CANTIDAD-->
             <!--MODAL DEPOSITO-->
@@ -692,6 +690,10 @@
         document.getElementById("producto").value = dat[1];
     }
 
+    function cantidad(datos) {
+        var dat = datos.split("_");
+        document.getElementById("productos").value = dat[1];
+    }
 
     //focus en el primer de marca
     $(document).ready(function() {

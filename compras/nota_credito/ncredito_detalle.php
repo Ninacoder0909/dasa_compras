@@ -155,7 +155,7 @@
                                                                     <td class="text-center"> <?php echo $pc['nro_factura']; ?></td>
                                                                     <td class="text-center"> <?php echo $pc['prv_razon_social']; ?></td>
                                                                     <td class="text-center"> <?php echo $resultadoiva; ?></td>
-                                                                    <td class="text-center"> <?php echo $resultado + $pc['monto'] ?></td>
+                                                                    <td class="text-center"> <?php echo $resultado ?></td>
                                                                 </tr>
                                                             <?php } ?>
                                                         </tbody>
@@ -262,7 +262,7 @@
                                                                 <label class="control-label col-lg-6 col-sm-6 col-md-6 col-xs-6">Producto</label>
                                                                 <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6">
                                                                     <?php $productos = consultas::get_datos("SELECT * FROM v_compras_detalle where id_compra = (SELECT id_compra from n_credit where id_credito = " . $_REQUEST['vidcredito'] . " )") ?>
-                                                                    <select class="select2" id="idproducto" onchange="obtenerprecio()" onkeyup="obtenerprecio()" onclick="obtenerprecio()" name="vproducto" required="" style="width: 300px;height: auto;">
+                                                                    <select class="select2" id="idproducto" onchange="obtenerprecio();obtenerdeposito()" onkeyup="obtenerprecio();obtenerdeposito()" onclick="obtenerprecio();obtenerdeposito()" name="vproducto" required="" style="width: 300px;height: auto;">
                                                                         <option value="">Seleccionar al menos un producto</option>
                                                                         <?php
                                                                         if (!empty($productos)) {
@@ -276,6 +276,12 @@
                                                                             <option value="">Debe insertar registros...</option>
                                                                         <?php } ?>
                                                                     </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group" id="deposito">
+                                                                <label class="control-label col-lg-6 col-sm-6 col-md-6 col-xs-6">Deposito</label>
+                                                                <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6">
+                                                                    <input type="text" name="vdeposito" class="form-control" readonly="" onkeypress="return soloNUM(event)" style="width: 300px;">
                                                                 </div>
                                                             </div>
                                                             <div class="form-group" id="precio">
@@ -468,7 +474,7 @@
 
     function quitar(datos) {
         var dat = datos.split("_");
-        $('#si').attr('href', 'ncredito_detalle_control.php?vidcredito=' + dat[0] + '&vproducto=' + dat[1] + '&vdeposito=' + dat[2] + '&voperacion=2');
+        $('#si').attr('href', 'ncredito_detalle_control.php?vidcredito=' + dat[0] + '&vproducto=' + dat[1] + '&voperacion=2');
         $('#confirmacion').html('<span class="glyphicon glyphicon-warning-sign"></span> Desea quitar el registro de la Nota de Credito N° <i><strong>' + dat[0] + '</strong></i>?');
     }
 
@@ -493,6 +499,23 @@
                 success: function(msg) {
                     $('#precio').html(msg);
                     calsubtotal();
+                }
+            });
+        }
+    }
+
+    function obtenerdeposito() {
+        var dat = $('#idproducto').val().split("_");
+        if (parseInt($('#idproducto').val()) > 0) {
+            $.ajax({
+                type: "GET",
+                url: "/dasa_compras/compras/nota_credito/listar_deposito.php?vidproducto=" + dat[0],
+                cache: false,
+                beforeSend: function() {
+                    $('#deposito').html('<img src="/dasa_compras/img/sistema/ajax-loader.gif">\n\<strong><i>Cargando...</i></strong></img>');
+                },
+                success: function(msg) {
+                    $('#deposito').html(msg);
                 }
             });
         }

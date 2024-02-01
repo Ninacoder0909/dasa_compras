@@ -195,13 +195,8 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label class="control-label  col-lg-3 col-sm-2 col-xs-2">Monto</label>
-                                            <div class="col-lg-4 col-sm-4 col-xs-4">
-                                                <?php date_default_timezone_set('America/Asuncion'); ?>
-                                                <input class="form-control" onkeypress="return soloNUM(event)" type="number" name="vmonto">
-                                            </div>
-                                        </div>
+                                        <input type="hidden" name="vsucursal" value="<?php echo $_SESSION['id_sucursal']; ?>">
+
                                         <div class="form-group">
                                             <label class="control-label  col-lg-3 col-sm-2 col-xs-2">Nro. de factura</label>
                                             <div class="col-lg-4 col-sm-4 col-xs-4">

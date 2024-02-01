@@ -102,7 +102,7 @@
                                                                         <td style="border: black solid thin;" class="text-center" data-title="Producto "><span style="color: red;margin: 3px " class="glyphicon glyphicon-ban-circle"></span><?php echo $p['id_credito'] ?></td>
                                                                     <?php } ?>
                                                                 <?php }
-                                                                $total = consultas::get_datos("SELECT sum((cantidad*precio)+monto) as total FROM det_credito where id_credito=$p[id_credito]");
+                                                                $total = consultas::get_datos("SELECT sum((cantidad*precio)) as total FROM det_credito where id_credito=$p[id_credito]");
                                                                 if ($total !== false && isset($total[0]['total'])) {
                                                                     $resultado = $total[0]['total'];
                                                                 } else {
@@ -114,7 +114,7 @@
                                                                 <td style="border: black solid thin;" class="text-center" data-title="Deposito "> <?php echo $p['prv_razon_social'] ?></td>
                                                                 <td style="border: black solid thin;" class="text-center" data-title="Deposito "> <?php echo $p['numerofactura'] ?></td>
                                                                 <td style="border: black solid thin;" class="text-center" data-title="Cantidad "> <?php echo $p['fecha_pedido1'] ?></td>
-                                                                <td style="border: black solid thin;" class="text-center" data-title="Cantidad "> <?php echo $p['monto'] + $resultado ?></td>
+                                                                <td style="border: black solid thin;" class="text-center" data-title="Cantidad "> <?php echo  $resultado ?></td>
 
                                                                 <td style="border: black solid thin;" data-title="Acciones" class="text-center">
 

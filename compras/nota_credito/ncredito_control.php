@@ -11,7 +11,7 @@ $fecharec = $_REQUEST['vfechareci'];
 $comprap = $_REQUEST['vidcompra'];
 $usuario = $_REQUEST['vusuario'];
 $motivo = $_REQUEST['vmotivo'];
-$monto = $_REQUEST['vmonto'];
+$vsucursal = $_REQUEST['vsucursal'];
 $nrofac = $_REQUEST['vnrofactura'];
 $timbrado = $_REQUEST['vnrotimp'];
 $timven = $_REQUEST['vetimp'];
@@ -22,7 +22,7 @@ $sql = "SELECT sp_credito(" . $operacion . "," .
     (!empty($fecha) ? $fecha : "2000/01/01") . "'," .
     (!empty($comprap) ? $comprap : 0) . "," .
     (!empty($motivo) ? $motivo : 0) . "," .
-    (!empty($monto) ? $monto : 0) . ",'" .
+    (!empty($vsucursal) ? $vsucursal : 0) . ",'" .
     (!empty($nrofac) ? $nrofac : 0) . "'," .
     (!empty($timbrado) ? $timbrado : 0) . ",'" .
     (!empty($timven) ? $timven : "2000/01/01") . "'," .

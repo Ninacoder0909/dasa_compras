@@ -18,7 +18,7 @@
         <div class="content-wrapper" style="background-repeat: no-repeat; background-position:center;background-image: url('/dasa_compras/img/sistema/fondo1.jpg');background-size: 100% 100%;background-size: cover">
             <section class="content">
                 <h3 style="font-weight: bold; font-size: 20px;text-align: center;color: whitesmoke">
-                    Bienvenido al Sistema: <?php echo ' ' . $_SESSION['nombres']; ?>
+                    Bienvenido al Sistema : <?php echo ' ' . $_SESSION['nombres']; ?>
                 </h3>
                 <h5 style="font-size: 14px;text-align: center;color: whitesmoke">
                     <?php date_default_timezone_set('America/Asuncion'); ?>
